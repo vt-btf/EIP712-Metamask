@@ -4,6 +4,7 @@
     npm i http-server
 ```
 cd to root folder and run http-server
+
 Go to http://127.0.0.1:8080
 
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EIP712 demo</title>
+  </head>
+  <body>
+    <p>
+      This page demonstrates how to sign EIP712 typed data using MetaMask and
+      verify it in Solidity.
+    </p>
+
+    <p>
+      To use this demo, you need at least version 4.14.0 of MetaMask which supports eth_signTypedData_v3.
+    </p>
+
+    <button id="signBtn">Click here to sign some typed data</button>
+    <br />
+    <br />
+    <textarea readonly rows=10 cols=80 id="response">
+    </textarea>
+
+    <br />
+
+    <script src="./solidityData.js" language="javascript"></script>
+    <script src="./sign.js" language="javascript"></script>
+  </body>
+</html>

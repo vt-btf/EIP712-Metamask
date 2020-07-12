@@ -1,7 +1,7 @@
 ### Install http-server
 
 ```bash
-    npm i http-server
+    npm install --global http-server
 ```
 cd to root folder and run http-server
 

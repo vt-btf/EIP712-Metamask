@@ -38,32 +38,6 @@ window.onload = function (e) {
       return;
     }
 
-    const domain = [
-      { name: "name", type: "string" },
-      { name: "version", type: "string" },
-      { name: "chainId", type: "uint256" },
-      { name: "verifyingContract", type: "address" },
-      { name: "salt", type: "bytes32" },
-    ];
-
-    const testData = [
-      { name: "spender", type: "address" },
-      { name: "amount", type: "uint256" },
-    ];
-  
-    const domainData = {
-      name: "TestSignature",
-      version: "2",
-      chainId: 5777,
-      verifyingContract: "0x1C56346CD2A2Bf3202F771f50d3D14a367B48070",
-      salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
-    };
-
-    message = {
-      spender: "0xE1B45033cBd272a58f7fCc4744Cf737DCcb24b76",
-      amount: 100 
-    };
-
 
     const msgParams = JSON.stringify({types:{
       EIP712Domain:[
@@ -89,16 +63,6 @@ window.onload = function (e) {
       to:{name:"Bob",wallet:"0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB"},
       contents:"Hello, Bob!"}
     })
-    
-    const data = JSON.stringify({
-      types: {
-        EIP712Domain: domain,
-        TestData: testData
-      },
-      domain: domainData,
-      primaryType: "TestData",
-      message: message
-    });
 
     const signer = web3.toChecksumAddress(web3.eth.accounts[0]);
     console.log(msgParams);
